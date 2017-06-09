@@ -1,7 +1,6 @@
-import boto3
-import time
 import os
-
+import time
+import boto3
 
 def run_handler(event, context):
     ec2 = boto3.client('ec2')
@@ -22,5 +21,5 @@ def run_handler(event, context):
     print(response_images['Images'][0])
     # Tag AMI
     response_tag_image = ec2.create_tags(Resources=[image_id], Tags=[{'Key': 'Origin', 'Value': 'aws-lambda'}, {'Key': 'Name', 'Value': name_of_backup}, {'Key': 'Environment', 'Value': 'dev'}, {
-        'Key': 'al:backup:instance_id', 'Value': instance_id}, {'Key': 'al:backup:timestamp', 'Value': time_stamp}, ])
+        'Key': 'backup:instance_id', 'Value': instance_id}, {'Key': 'backup:timestamp', 'Value': time_stamp}, ])
     print(response_tag_image)
