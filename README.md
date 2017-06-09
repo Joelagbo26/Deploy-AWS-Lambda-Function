@@ -79,13 +79,11 @@ Cd to playbooks directory
 
 Run the ansible playbook to deploy Wordpress website to ECS task and start a service
 
-`$ ansible-playbook deploy-ecs-task\&service.yml`
+`$ ansible-playbook deploy-lambda-function.yml`
 
 This does the following: 
 
-* Creates a task definition using wordpress,phpmyadmin and mysql docker images 
-* Creates a ECS service in pre existing cluster(update cluster name in deploy-ecs-task&service.yml file in the "set_fact" task).
-* If there are no errors, Wordpress should now be accessible at the Public DNS of the Cluster's Container instance. PHP My admin should be available on the same host at 8181. (Port 8181 needs to be made accesible via security group of the EC2 instance.)
+* 
 
 
 ## Reference
