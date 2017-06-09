@@ -1,4 +1,4 @@
-# Deploy AWS ECS Task and Service via Ansible
+# Dev environment for deploying AWS Lambda Functions via Ansible
 
 ## Description
 
