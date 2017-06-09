@@ -57,7 +57,7 @@ Check to make sure we have the id_rsa.pub file present as specified in the ssh-a
 
 Run the ansible play book - ssh-addkey.yml with ask pass option to make sure we are deploying the key to all machines- in this case there is only one machine- localhost.
 
-`$ ansible-playbook deploytoECS/playbooks/ssh-addkey.yml --ask-pass`
+`$ ansible-playbook deploytoLambda/playbooks/ssh-addkey.yml --ask-pass`
 
 Now try the ansible ping module to ping the local server with the ask password option.
 
@@ -75,7 +75,7 @@ localhost | SUCCESS => {
 
 Cd to playbooks directory
 
-`$ cd deploytoECS/playbooks`
+`$ cd deploytoLambda/playbooks`
 
 Run the ansible playbook to deploy Wordpress website to ECS task and start a service
 

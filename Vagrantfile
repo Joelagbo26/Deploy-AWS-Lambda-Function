@@ -17,7 +17,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     v.customize ["modifyvm", :id, "--nictype1", "virtio"]
   end
 
-  config.vm.synced_folder ".", "/home/vagrant/deploytoECS",
+  config.vm.synced_folder ".", "/home/vagrant/deploytoLambda",
     mount_options: ["dmode=775,fmode=664"]
   
   config.vm.provision "file", source: "config/.aws/credentials", destination: "~/.aws/credentials"

@@ -2,5 +2,6 @@
 config/
 playbooks/var.json
 playbooks/*.retry
+.vscode/
 
 *.pem
