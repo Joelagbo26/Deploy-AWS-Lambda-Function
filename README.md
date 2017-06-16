@@ -73,7 +73,11 @@ localhost | SUCCESS => {
 ```
 ### Deploy Lambda function to AWS lambda using Ansible
 
-cd into src folder and update the file that will be deployed to lambda. Here we are using python code that will backup and tag an EC2 instance.
+ Here we are using python code that will backup and tag an EC2 instance.
+
+ ![Alt](/resources/backup_ec2.jpg "Architecture Diagram")
+
+ cd into src folder and update the file that will be deployed to lambda.
 
 `$ cd deploytoLambda/src`
 
