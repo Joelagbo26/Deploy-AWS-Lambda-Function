@@ -85,7 +85,7 @@ Update the following variables with respective values
 
 * LAMBDA_ARN - AWS IAM role with necessary permissions to execute the lambda function
 * INSTANCE_ID - The EC2 instance that is being backed up
-* INSTANCE_NAME- Name of the image
+* INSTANCE_NAME- Name of the EC2 instance that is backed up
 * INSTANCE_DESCRIPTION- Description for the image
 
 Run the ansible playbook to deploy Lambda fucntion to AWS Lambda
