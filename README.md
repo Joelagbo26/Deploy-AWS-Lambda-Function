@@ -71,19 +71,31 @@ localhost | SUCCESS => {
     "ping": "pong"
 }
 ```
-### Deploy ECS task and service to AWS ECS cluster
+### Deploy Lambda function to AWS lambda using Ansible
 
-Cd to playbooks directory
+cd into src folder and update the file that will be deployed to lambda. Here we are using python code that will backup and tag an EC2 instance.
+
+`$ cd deploytoLambda/src`
+
+cd to playbooks directory once lambda function is ready to be deployed.
 
 `$ cd deploytoLambda/playbooks`
 
-Run the ansible playbook to deploy Wordpress website to ECS task and start a service
+Update the following variables with respective values
+
+* LAMBDA_ARN - AWS IAM role with necessary permissions to execute the lambda function
+* INSTANCE_ID - The EC2 instance that is being backed up
+* INSTANCE_NAME- Name of the image
+* INSTANCE_DESCRIPTION- Description for the image
+
+Run the ansible playbook to deploy Lambda fucntion to AWS Lambda
 
 `$ ansible-playbook deploy-lambda-function.yml`
 
 This does the following: 
 
-* 
+* Zips up the python code
+* Creates a Lambda function in AWS Lambda.
 
 
 ## Reference
