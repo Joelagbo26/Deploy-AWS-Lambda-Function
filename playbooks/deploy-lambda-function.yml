@@ -6,7 +6,7 @@
         path: /home/vagrant/deploytoLambda/src/backup-ec2.py
         format: zip
         dest: /home/vagrant/deploytoLambda/src/backup-ec2.zip
-    - set_fact: LAMBDA_ARN="YOUR_LAMBDA_ARN"
+    - set_fact: LAMBDA_ARN="YOUR_LAMBDA_ROLE_ARN"
     - set_fact: INSTANCE_ID=""
     - set_fact: INSTANCE_NAME=""
     - set_fact: INSTANCE_DESCRIPTION=""
@@ -18,7 +18,7 @@
         runtime: 'python2.7'
         role: "{{LAMBDA_ARN}}"
         handler: 'backup-ec2.run_handler'
-        description: "Testing Backup of Jenkins server via Ansible"       
+        description: "Testing Backup of EC2 instance via Ansible"       
         environment_variables:
           instance_id: "{{INSTANCE_ID}}"
           instance_name: "{{INSTANCE_NAME}}"

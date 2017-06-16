@@ -2,6 +2,7 @@ import os
 import time
 import boto3
 
+
 def run_handler(event, context):
     ec2 = boto3.client('ec2')
     instance_id = os.environ['instance_id']
